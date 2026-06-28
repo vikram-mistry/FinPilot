@@ -64,13 +64,13 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+    overscroll-behavior: none;
   }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overscroll-behavior: none;
   }
 
   /* Custom scrollbar */

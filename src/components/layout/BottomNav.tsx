@@ -77,7 +77,7 @@ export function BottomNav() {
   return (
     <div className="md:hidden">
       {/* Primary Navigation Row */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-background border-t border-border safe-bottom">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-card border-t border-border shadow-[0_-4px_24px_rgba(0,0,0,0.08)] safe-bottom">
         <div className="flex justify-around items-center h-16 px-2">
           {primaryItems.map((item) => (
             <NavLink

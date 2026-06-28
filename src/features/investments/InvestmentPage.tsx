@@ -305,7 +305,7 @@ export function InvestmentPage() {
                         <span>Create Goal</span>
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="rounded-3xl border border-border">
+                    <DialogContent className="rounded-3xl border border-border" onOpenAutoFocus={(e) => e.preventDefault()}>
                       <DialogHeader>
                         <DialogTitle className="text-lg font-bold text-foreground">Create Investment Goal</DialogTitle>
                       </DialogHeader>

@@ -345,7 +345,7 @@ export function LoanPage() {
                     <span>Log Prepayment</span>
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="rounded-3xl border border-border">
+                <DialogContent className="rounded-3xl border border-border" onOpenAutoFocus={(e) => e.preventDefault()}>
                   <DialogHeader>
                     <DialogTitle className="text-lg font-bold text-foreground">Log Past Prepayment</DialogTitle>
                   </DialogHeader>
@@ -464,7 +464,7 @@ export function LoanPage() {
                   <span>Add Revision</span>
                 </Button>
               </DialogTrigger>
-              <DialogContent className="rounded-3xl border border-border">
+              <DialogContent className="rounded-3xl border border-border" onOpenAutoFocus={(e) => e.preventDefault()}>
                 <DialogHeader>
                   <DialogTitle className="text-lg font-bold text-foreground">Log Floating Rate Change</DialogTitle>
                 </DialogHeader>

@@ -631,7 +631,7 @@ export function MonthlyPlannerPage() {
 
           {/* Smart Plan Allocation Card */}
           {advisorPlan && adjustingPlan && (
-            <Card className="rounded-2xl border border-primary/20 bg-slate-900/40 backdrop-blur-md">
+            <Card className="rounded-2xl border border-primary/20 bg-card backdrop-blur-md">
               <CardHeader className="pb-2 border-b">
                 <CardTitle className="text-sm font-extrabold text-primary uppercase tracking-wider flex items-center gap-1.5">
                   <Sparkles className="w-4 h-4" />
@@ -654,7 +654,7 @@ export function MonthlyPlannerPage() {
                       max={String(adjustingPlan.emergency + adjustingPlan.buffer)}
                       value={adjustingPlan.emergency}
                       onChange={(e) => handleSliderChange('emergency', Number(e.target.value))}
-                      className="w-full accent-primary bg-slate-800 rounded-lg appearance-none h-1.5 cursor-pointer"
+                      className="w-full accent-primary bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none h-1.5 cursor-pointer"
                     />
                   )}
                 </div>
@@ -672,7 +672,7 @@ export function MonthlyPlannerPage() {
                       max={String(adjustingPlan.sip + adjustingPlan.buffer)}
                       value={adjustingPlan.sip}
                       onChange={(e) => handleSliderChange('sip', Number(e.target.value))}
-                      className="w-full accent-primary bg-slate-800 rounded-lg appearance-none h-1.5 cursor-pointer"
+                      className="w-full accent-primary bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none h-1.5 cursor-pointer"
                     />
                   )}
                 </div>
@@ -691,7 +691,7 @@ export function MonthlyPlannerPage() {
                         max={String(adjustingPlan.prepayment + adjustingPlan.buffer)}
                         value={adjustingPlan.prepayment}
                         onChange={(e) => handleSliderChange('prepayment', Number(e.target.value))}
-                        className="w-full accent-primary bg-slate-800 rounded-lg appearance-none h-1.5 cursor-pointer"
+                        className="w-full accent-primary bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none h-1.5 cursor-pointer"
                       />
                     )}
                   </div>

@@ -57,6 +57,7 @@
   body,
   #root {
     height: 100%;
+    height: -webkit-fill-available;
     width: 100%;
     overflow: hidden;
     margin: 0;

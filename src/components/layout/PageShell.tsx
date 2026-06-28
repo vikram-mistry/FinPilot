@@ -14,12 +14,12 @@ export function PageShell({ children }: PageShellProps) {
       <Sidebar />
 
       {/* Main Layout Area */}
-      <div className="flex-1 flex flex-col h-full overflow-hidden">
+      <div className="flex-1 flex flex-col h-full overflow-hidden min-h-0">
         {/* Top Header */}
         <TopBar />
 
         {/* Scrollable Page Content */}
-        <main className="flex-1 overflow-y-auto px-4 md:px-6 py-6 pb-[calc(6rem+env(safe-area-inset-bottom,0px))] md:pb-6">
+        <main className="flex-1 overflow-y-auto px-4 md:px-6 py-6 pb-[calc(6rem+env(safe-area-inset-bottom,0px))] md:pb-6 min-h-0">
           <div className="max-w-7xl mx-auto space-y-6 min-h-[calc(100%+1px)]">
             {children}
           </div>

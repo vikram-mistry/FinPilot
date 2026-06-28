@@ -19,6 +19,7 @@ import { useAppStore } from '@/store/appStore';
 import { cn } from '@/lib/cn';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { Button } from '../ui/button';
+import logo from '@/assets/logo.svg';
 
 interface NavItem {
   name: string;
@@ -54,14 +55,14 @@ export function Sidebar() {
       <div className="flex items-center justify-between h-16 px-4 border-b border-border">
         {!collapsed && (
           <div className="flex items-center gap-2.5 pl-2">
-            <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Logo" className="w-8 h-8 object-contain" />
+            <img src={logo} alt="Logo" className="w-8 h-8 object-contain" />
             <span className="font-bold text-lg bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent">
               FinPilot
             </span>
           </div>
         )}
         {collapsed && (
-          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Logo" className="mx-auto w-8 h-8 object-contain" />
+          <img src={logo} alt="Logo" className="mx-auto w-8 h-8 object-contain" />
         )}
 
         <button

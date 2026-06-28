@@ -4,6 +4,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useOffline } from '@/hooks/useOffline';
 import { useAppStore } from '@/store/appStore';
 import { cn } from '@/lib/cn';
+import logo from '@/assets/logo.svg';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { Button } from '../ui/button';
@@ -29,7 +30,7 @@ export function TopBar() {
         {/* Brand on Mobile / Page Heading on Desktop */}
         <div className="flex items-center gap-3">
           <div className="md:hidden flex items-center gap-2">
-            <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="FinPilot Logo" className="w-8 h-8 object-contain" />
+            <img src={logo} alt="FinPilot Logo" className="w-8 h-8 object-contain" />
             <span className="font-bold text-base bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent">
               FinPilot
             </span>

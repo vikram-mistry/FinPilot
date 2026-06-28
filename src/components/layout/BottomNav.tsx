@@ -107,24 +107,30 @@ export function BottomNav() {
         {showMore && (
           <>
             <motion.div
+              key="more-backdrop"
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
               onClick={() => setShowMore(false)}
-              className="fixed inset-0 bg-black/60 z-50 pointer-events-auto"
+              onTouchEnd={(e) => { e.preventDefault(); setShowMore(false); }}
+              className="fixed inset-0 bg-black/60 z-50 cursor-pointer"
+              aria-label="Close menu"
+              role="button"
             />
             <motion.div
+              key="more-sheet"
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 250 }}
-              className="fixed bottom-0 left-0 right-0 z-[55] bg-card rounded-t-3xl border-t border-border p-6 shadow-2xl safe-bottom pointer-events-auto"
+              className="fixed bottom-0 left-0 right-0 z-[55] bg-card rounded-t-3xl border-t border-border p-6 shadow-2xl safe-bottom"
             >
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-lg font-semibold px-1">More Features</h3>
                 <button
                   onClick={() => setShowMore(false)}
-                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  className="p-2.5 hover:bg-muted rounded-full transition-colors cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center"
+                  aria-label="Close"
                 >
                   <X className="w-5 h-5" />
                 </button>

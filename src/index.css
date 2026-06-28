@@ -53,11 +53,13 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply bg-background;
+  }
   html,
   body,
   #root {
     height: 100%;
-    height: -webkit-fill-available;
     width: 100%;
     overflow: hidden;
     margin: 0;
@@ -68,6 +70,7 @@
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
   }
 
   /* Custom scrollbar */
@@ -121,5 +124,12 @@
   }
   .safe-top {
     padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  /* Dynamic viewport height — 100dvh handles iOS Safari toolbar;
+     100vh fallback for older browsers */
+  .h-screen-safe {
+    height: 100vh;
+    height: 100dvh;
   }
 }
